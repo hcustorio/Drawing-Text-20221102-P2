@@ -1,13 +1,14 @@
 //Global Variables
-int appWidth, appHeight;
+int appWidth, appHeight, fontSize;
 float titleX, titleY, titleWidth, titleHeight;
 String title  = "Wahoo!";
 PFont titleFont;
+color purple=#2C08FF; resetDefaultink=#FFFFFF //not Night Mode Friendly
 //
 size(500, 600);//Portrait
 //Copy Display Algorithm
 appWidth = width;
-appHeight = height; 
+appHeight = height;
 //
 //Population
 titleX = appWidth * 1/4;
@@ -19,11 +20,17 @@ titleHeight = appHeight * 1/10;
 //Fonts from OS (Operating System)
 String[] fontList = PFont.list(); //To list all fonts available
 printArray(fontList); //For listing all possible fonts to choose from, then createFont
-titleFont = createFont("OCRAExtended", 55); // Verified the font exists in Processing.JAVA
+titleFont = createFont("OCR A Extended", 55); // Verified the font exists in Processing.JAVA
 // Tools / Create font / Find Font / Do not press "OK", known bug
 //
 //Layout or text space and typographical features
 rect(titleX, titleY, titleWidth, titleHeight);
 //
 //Repeated Executed Code 
+fill(purple);
+textAlign();
+//Values: [ LEFT | CENTER | RIGHT ] &[ TOP | CENTER | BOTTOM| BASELINE]
+fontSize = 50;
+textFont(titleFont, fontSize);
 text( title, titleX, titleY, titleWidth, titleHeight);
+fill(resetDefaultInk);
