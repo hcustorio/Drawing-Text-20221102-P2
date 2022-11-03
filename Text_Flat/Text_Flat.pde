@@ -2,7 +2,7 @@
 int appWidth, appHeight, fontSize;
 float titleX, titleY, titleWidth, titleHeight;
 float footerX, footerY, footerWidth, footerHeight;
-String title = "Wahoo!";
+String title = "Wahoo!", footer="Drip";
 PFont titleFont;
 color purple=#2C08FF, resetDefaultInk=#FFFFFF; //not Night Mode Friendly
 //
@@ -14,7 +14,7 @@ appHeight = height;
 //Population
 titleX = footerX = appWidth * 1/4;
 titleY = appHeight * 1/10;
-footerY = appHeight * 9/10;
+footerY = appHeight * 8/10;
 titleWidth = footerWidth = appWidth * 1/2;
 titleHeight = footerHeight = appHeight * 1/10;
 //
@@ -36,4 +36,7 @@ textAlign(CENTER, CENTER);
 fontSize = 50; //Largest size given window
 textFont(titleFont, fontSize);
 text( title, titleX, titleY, titleWidth, titleHeight);
+textAlign(CENTER, BOTTOM);
+//Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
+text( footer, footerX, footerY, footerWidth, footerHeight);
 fill(resetDefaultInk);
