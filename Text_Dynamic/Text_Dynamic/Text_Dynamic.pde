@@ -21,8 +21,12 @@ void setup()
   footerY = appHeight * 8/10;
   titleWidth = footerWidth = appWidth * 1/2;
   titleHeight = footerHeight = appHeight * 1/10;
+  //Red square
   fill(#ED3939);
-  rect(150, 200, 200 ,100 ,30);
+  rect(150, 150, 130 ,200 ,100);
+  //Orange square
+  fill(#FA9D3F);
+  rect(200, 170, 100 ,80 ,30);
   
   //
   //Text Setup, single executed code
